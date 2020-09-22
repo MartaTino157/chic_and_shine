@@ -7,13 +7,18 @@ class database {
 	private $password;
 	private $baseName;
 
-	function_construct() {
-		$this->host = 'localhost';
-		$this->user = 'root';
-		$this->password = '';
-		$this->baseName = 'chicandshine';
-		$this->connect();
-	}
+    function __construct() {
+
+        $this->host = 'localhost';
+        $this->user = 'root';
+        $this->password = '';
+        $this->baseName = 'newsportal';
+        $this->connect();
+    }
+
+    function __destruct() {
+        $this->disconnect();
+    }
 
 	function connect() {
 		if(!$this->conn) {
