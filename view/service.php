@@ -28,6 +28,9 @@ ob_start();
 				</tr>
 			</thead>
 			<tbody>
+				<?php 
+					ViewPrice::Price($arr);
+				?>
 			</tbody>
 		</table>
 	</div>

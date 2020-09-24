@@ -14,9 +14,12 @@
 	elseif ($path == 'service') {
 		$response = Controller::startService();
 	}
-	elseif ($path == 'galery') {
+	elseif ($path == 'galery' ) {
 		$response = Controller::startGalery();
 	}
+	/*elseif ($path == 'all') {
+		$response = Controller::allImages();
+	}*/
 	elseif ($path == 'blog') {
 		$response = Controller::startBlog();
 	}

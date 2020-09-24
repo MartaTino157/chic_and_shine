@@ -34,6 +34,12 @@ button.bg-darkmy:focus {
   background-color: #dae0e5 !important;
 }
 
+/*--------------------- категории -----------------------*/
+
+nav .nav-item a {
+	color: #423D3C;
+}
+
 /* ------------------- карусель ------------------------*/
 .carousel-caption div {
 	height: 10vh;
