@@ -33,14 +33,24 @@ class Controller {
 		$arr = Galery::getAllImages();
 		include_once 'view/galery.php';
 	}*/
-
+	public static function imageByCatID($id) {
+		$arr = Galery::getImagesByCategoryID($id);
+		include_once 'view/galery.php';
+	}
 	public function startBlog() {
-		include_once('view/blog.php');
+		$arr = Blog::allArticles();
+		include_once'view/blog.php';
+	}
+	public static function articleByID($id) {
+		$n = Blog::getArticleByID($id);
+		include_once 'view/readArticle.php';
 	}
 	public function startAppointment() {
 		include_once('view/appointment.php');
 	}
 	public function startReviews() {
-		include_once('view/reviews.php');
+		$arr = Reviews::getReviews();
+		include_once'view/reviews.php';
+		include_once'view/reviewsList.php';
 	}
 }

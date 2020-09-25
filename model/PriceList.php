@@ -4,7 +4,6 @@ class PriceList {
 		$query = "SELECT * FROM service ORDER BY id";
 		$db = new Database();
 		$arr = $db->getAll($query);
-		//echo $query;
 		return $arr; 
 	}
 }

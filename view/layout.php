@@ -6,6 +6,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<link rel="stylesheet" href="public/dist/css/lightbox.min.css">
+
 	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>
@@ -22,23 +24,23 @@
 		</button>
 		<div class="navbar-collapse collapse show" id="navbarsDown">
 			<ul class="navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="home">Главная</a>
+				<li class="nav-item">
+					<a class="nav-link" href="home" id="1">Главная</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="service">Услуги</a>
+					<a class="nav-link" href="service" id="2">Услуги</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="galery">Галерея</a>
+					<a class="nav-link" href="galery" id="3">Галерея</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="blog">Блог</a>
+					<a class="nav-link" href="blog" id="4">Блог</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="appointment">Запись</a>
+					<a class="nav-link" href="appointment" id="5">Запись</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="reviews">Отзывы</a>
+					<a class="nav-link" href="reviews" id="6">Отзывы</a>
 				</li>
 			</ul>
 			<form class="form-inline">
@@ -90,6 +92,7 @@
 </div>
 
 
+ <script src="public/dist/js/lightbox-plus-jquery.min.js"></script>
 
 
 

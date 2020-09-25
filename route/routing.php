@@ -14,15 +14,24 @@
 	elseif ($path == 'service') {
 		$response = Controller::startService();
 	}
+
 	elseif ($path == 'galery' ) {
 		$response = Controller::startGalery();
 	}
 	/*elseif ($path == 'all') {
 		$response = Controller::allImages();
 	}*/
+	elseif ($path == 'category' and isset($_GET['id'])) {
+		$response = Controller::imageByCatID($_GET['id']);	
+	}
+
 	elseif ($path == 'blog') {
 		$response = Controller::startBlog();
 	}
+	elseif ($path == 'article' and isset($_GET['id'])) {
+		$response = Controller::articleByID($_GET['id']);	
+	}
+
 	elseif ($path == 'appointment') {
 		$response = Controller::startAppointment();
 	}
