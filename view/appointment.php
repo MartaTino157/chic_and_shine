@@ -9,7 +9,7 @@ ob_start();
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 		</div>
 		<div class="col-md-6">
-			<form>
+			<form role="form" method="POST" action="answerAppointment">
 				<fieldset>
 					<legend>Заполните форму записи</legend>
 					<div class="form-row">
@@ -17,7 +17,7 @@ ob_start();
 							<label>Имя</label>
 						</div>
 						<div class="form-group col-md-9">
-							<input type="text" name="yourname" class="form-control" placeholder="Введите Ваше имя" required autofocus>
+							<input type="text" name="name" class="form-control" placeholder="Введите Ваше имя" required autofocus>
 						</div>
 					</div>
 
@@ -30,38 +30,47 @@ ob_start();
 						</div>
 					</div>
 
-					<div class="form-row">
+					<div class="row">
 						<div class="form-group col-md-3">
-							<label>Выберите дату</label>
+							<label>Процедура</label>
 						</div>
 						<div class="form-group col-md-9">
-							<input type="date" name="mydate" class="form-control" required>
+							<textarea class="form-control" name="procedure" placeholder="Напишите, что вы хотите" rows="2" required></textarea>
 						</div>
 					</div>
 
 					<div class="form-row">
 						<div class="form-group col-md-3">
-							<label>Подходящее время</label>
+							<label>Выберите дату</label>
+						</div>
+						<div class="form-group col-md-9">
+							<input type="date" name="date" class="form-control" required>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-3">
+							<label>Выберите время</label>
 						</div>
 						<div class="form-group col-md-9">
 							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+								<input class="form-check-input" type="radio" name="time" id="time1" value="9:00">
 		  						<label class="form-check-label" for="inlineRadio1">9:00</label>
 							</div>
 							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+								<input class="form-check-input" type="radio" name="time" id="time2" value="11:00">
 		  						<label class="form-check-label" for="inlineRadio1">11:00</label>
 							</div>
 							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+								<input class="form-check-input" type="radio" name="time" id="time3" value="13:00">
 		  						<label class="form-check-label" for="inlineRadio1">13:00</label>
 							</div>
 							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+								<input class="form-check-input" type="radio" name="time" id="time4" value="15:00">
 		  						<label class="form-check-label" for="inlineRadio1">15:00</label>
 							</div>
 							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+								<input class="form-check-input" type="radio" name="time" id="time5" value="17:00">
 		  						<label class="form-check-label" for="inlineRadio1">17:00</label>
 							</div>
 						</div>
@@ -69,7 +78,7 @@ ob_start();
 
 					<div class="form-group row">
 						<div class="col-sm-10">
-							<button type="submit" class="btn btn-primary">Записаться</button>
+							<button type="submit" class="btn btn-primary" name="save">Записаться</button>
 						</div>
 					</div>
 				</fieldset>

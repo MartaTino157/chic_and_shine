@@ -35,6 +35,9 @@
 	elseif ($path == 'appointment') {
 		$response = Controller::startAppointment();
 	}
+	elseif($path == 'answerAppointment'){
+		$response = Controller::answerAppointment();
+	}
 	elseif ($path == 'reviews') {
 		$response = Controller::startReviews();
 	}

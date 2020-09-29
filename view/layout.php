@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="stylesheet" href="public/dist/css/lightbox.min.css">
+	<!--<link rel="stylesheet" href="public/dist/css/lightbox.min.css">-->
 
 	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="public/css/style.css">
@@ -92,7 +92,7 @@
 </div>
 
 
- <script src="public/dist/js/lightbox-plus-jquery.min.js"></script>
+<!--<script src="public/dist/js/lightbox-plus-jquery.min.js"></script>-->
 
 
 

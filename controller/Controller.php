@@ -48,6 +48,10 @@ class Controller {
 	public function startAppointment() {
 		include_once('view/appointment.php');
 	}
+	public function answerAppointment() {
+		$result = Appointment::appointmentForm();
+		include_once('view/answerAppointment.php');
+	}
 	public function startReviews() {
 		$arr = Reviews::getReviews();
 		include_once'view/reviews.php';
