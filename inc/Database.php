@@ -58,4 +58,9 @@ class database {
 		$response = $this->conn->exec($query);
 		return $response;
 	}
+	//получение номера последней записи
+	function getLastId() {
+        $lastId = $this->conn->lastInsertId();
+        return $lastId;
+    }
 }

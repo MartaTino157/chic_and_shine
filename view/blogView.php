@@ -16,15 +16,16 @@ class ViewBlog {
 			$string = substr($string, 0, strrpos($string, ' '));
 			echo $string."… ";
 			
-			echo '<a href="article?id='.$value['id'].'" class="btn btn-outline-primary">Читать дальше</a>';
+			echo '<br><a href="article?id='.$value['id'].'" class="btn btn-outline-primary">Читать дальше</a>';
 			echo "</div>";
 		}
 	}
 
 	public static function readArticle($n) {
 		//echo "jhfgasljghs";
+		echo "<div class 'row'>";
 		echo "<div class='col-md-4'>";
-		echo '<img src="data:image/jpeg;base64,'.base64_encode($n['image']).'"width=300 />';
+		echo '<img src="data:image/jpeg;base64,'.base64_encode($n['image']).'"width=250 />';
 		echo "</div>";
 
 		echo "<div class='col-md-6'>";
@@ -32,6 +33,8 @@ class ViewBlog {
 		echo $n['article'];
 		echo '<a href="blog" class="btn btn-outline-primary">Назад</a>';
 		echo "</div>";
+		echo "</div>";
+
 
 	}
 }

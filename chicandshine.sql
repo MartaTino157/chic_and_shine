@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Сен 21 2020 г., 08:13
+-- Время создания: Окт 01 2020 г., 11:25
 -- Версия сервера: 10.4.13-MariaDB
 -- Версия PHP: 7.2.31
 
@@ -32,16 +32,17 @@ CREATE TABLE `appointments` (
   `date` date NOT NULL,
   `time` time NOT NULL,
   `customer` int(11) NOT NULL,
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  `record_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Дамп данных таблицы `appointments`
 --
 
-INSERT INTO `appointments` (`id`, `date`, `time`, `customer`, `description`) VALUES
-(1, '2020-09-20', '09:00:00', 1, 'Маникюр с покрытием гель-лак'),
-(2, '2020-09-20', '11:00:00', 2, 'Наращивание');
+INSERT INTO `appointments` (`id`, `date`, `time`, `customer`, `description`, `record_date`) VALUES
+(1, '2020-09-20', '09:00:00', 1, 'Маникюр с покрытием гель-лак', '2020-09-17'),
+(2, '2020-09-20', '11:00:00', 2, 'Наращивание', '2020-09-15');
 
 -- --------------------------------------------------------
 
