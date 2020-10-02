@@ -57,4 +57,8 @@ class Controller {
 		include_once'view/reviews.php';
 		include_once'view/reviewsList.php';
 	}
+	public function answerReviews() {
+		$result = Review::reviewsForm();
+		include_once('view/answerReviews.php');
+	}
 }

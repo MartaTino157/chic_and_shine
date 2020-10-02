@@ -4,7 +4,7 @@ ob_start();
 
 <div class="row">
 	<div class="col-md-4">
-		<form>
+		<form role="form" method="POST" action="answerReviews">
 			<fieldset>
 				<legend>Оставить сообщение</legend>
 				<div class="form-row">
@@ -12,7 +12,7 @@ ob_start();
 						<label>Имя</label>
 					</div>
 					<div class="form-group col-md-9">
-						<input type="text" name="yourname" class="form-control" placeholder="Введите Ваше имя" autofocus value="Аноним">
+						<input type="text" name="autor" class="form-control" placeholder="Введите Ваше имя" autofocus value="Аноним">
 					</div>
 				</div>
 
@@ -21,19 +21,19 @@ ob_start();
 						<label>Email</label>
 					</div>
 					<div class="form-group col-md-9">
-						<input type="tel" name="telefon" class="form-control" placeholder="Введите ваш email" required>
+						<input type="email" name="email" class="form-control" placeholder="Введите ваш email" required>
 						<small id="emailHelp" class="form-text text-muted">Email нужен, чтобы мы могли ответить на Ваши вопросы</small>
 					</div>
 				</div>
 								
 				<div class="form-group">
 					<label>Текст сообщения</label>
-					<textarea class="form-control" rows="3" required></textarea>
+					<textarea class="form-control" name="message" rows="3" required></textarea>
 				</div>
 
 				<div class="form-group row">
 					<div class="col-sm-10">
-						<button type="submit" class="btn btn-success">Отправить</button>
+						<button type="submit" name="submit" class="btn btn-success">Отправить</button>
 					</div>
 				</div>
 			</fieldset>

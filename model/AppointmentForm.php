@@ -1,5 +1,7 @@
 <?php 
 class Appointment {
+
+
 	public function appointmentForm() {
 		$controll=array(0=>false,1=>'error');
 		if(isset($_POST['save'])) {
@@ -31,37 +33,41 @@ class Appointment {
 			}else{
 				$time = $_POST['time'];
 			}
-
+			$recordDate = date('Y-m-d');
 
 			if(mb_strlen($errorString) == 0) {
-				$recordDate = date('Y-m-d');
 				
-				$sql = "SELECT * FROM customers WHERE phone = '$telefon' AND name = '$name'" ;
+				
+				$sql = "SELECT * FROM `customers` WHERE phone = '".$telefon."' AND name = '".$name."'" ;
 				$db = new Database();
-				$item = $db->executeRun($sql);
-
-				if($item == 0) {
+				$item = $db->getOne($sql);
+				
+				if($item ) {
+					//print_r($item);
+					$id=$item['id'];
+				}else{
 					$sql="INSERT INTO `customers` (`id`,`name`,`phone`) VALUES (NULL, '$name', '$telefon')";
 					$item = $db->executeRun($sql);
+					$id = $db->getLastId();
 				}
 
-				$id = $db->getLastId();
-				$sql = "INSERT INTO `appointments` (`id`,`date`,`time`, `customer`, `discription`, `record_date`) VALUES (NULL, '$date', '$time', '$id', '$procedure', '$recordDate')";
+				$sql="INSERT INTO `appointments` (`id`, `date`, `time`, `customer`, `description`, `record_date`) VALUES (NULL, '$date', '$time', '$id', '$procedure', '$recordDate')";
 				$item = $db->executeRun($sql);
-
 
 				if($item)
 					$controll=array(0=>true);
 				else
 					$controll=array(0=>false,1=>'error');
 
-				$controll=array(0=>true);
-
 			}else{
 				$controll=array(0=>false,1=>$errorString);
 			}
 		}
 		return $controll;
-	}
-}
+	}//
+
+
+
+
+}//class
 ?>

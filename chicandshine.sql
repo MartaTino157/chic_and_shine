@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 01 2020 г., 11:25
+-- Время создания: Окт 02 2020 г., 10:18
 -- Версия сервера: 10.4.13-MariaDB
 -- Версия PHP: 7.2.31
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `appointments` (
   `id` int(11) NOT NULL,
   `date` date NOT NULL,
-  `time` time NOT NULL,
+  `time` varchar(8) NOT NULL,
   `customer` int(11) NOT NULL,
   `description` text NOT NULL,
   `record_date` date NOT NULL
@@ -102,7 +102,7 @@ CREATE TABLE `commentators` (
   `email` char(50) NOT NULL,
   `message` text NOT NULL,
   `date` datetime NOT NULL,
-  `flag` tinyint(1) DEFAULT NULL
+  `flag` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -110,8 +110,14 @@ CREATE TABLE `commentators` (
 --
 
 INSERT INTO `commentators` (`id`, `name`, `email`, `message`, `date`, `flag`) VALUES
-(1, 'Катя', 'katya@email.com', 'Спасибо за маникюр', '2020-09-18 11:08:34', NULL),
-(2, 'Вика', 'vika@email.com', 'Все хорошо', '2020-09-17 14:23:34', 0);
+(1, 'Катя', 'katya@email.com', 'Спасибо за маникюр', '2020-09-18 11:08:34', 0),
+(2, 'Вика', 'vika@email.com', 'Все хорошо', '2020-09-17 14:23:34', 1),
+(3, 'Женя', 'genya@email.com', 'Cool!', '2020-10-09 10:59:34', 1),
+(4, 'Аноним', 'an@an.com', 'ryhesrhnfgxjhru', '2020-10-02 11:15:14', 0),
+(5, '', 'an@an.com', 'fyjdrtmkgchkdt', '2020-10-02 11:15:35', 0),
+(6, '', 'an@an.com', 'hf,lghj,vgktfg', '2020-10-02 11:16:10', 0),
+(7, '', 'an@an.com', 'ghmkvhmxfrji', '2020-10-02 11:16:44', 0),
+(8, 'Аноним', 'an@an.com', 'hj,lcgtfkldtygh,m', '2020-10-02 11:17:12', 0);
 
 -- --------------------------------------------------------
 
@@ -131,7 +137,8 @@ CREATE TABLE `customers` (
 
 INSERT INTO `customers` (`id`, `name`, `phone`) VALUES
 (1, 'Мария', 37215487985),
-(2, 'Елена', 37245817692);
+(2, 'Елена', 37245817692),
+(4, 'Анна', 12345656656);
 
 -- --------------------------------------------------------
 
@@ -214,7 +221,7 @@ INSERT INTO `service` (`id`, `name`, `price`, `description`) VALUES
 --
 ALTER TABLE `appointments`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `customer` (`customer`);
+  ADD KEY `customer` (`customer`);
 
 --
 -- Индексы таблицы `blog`
@@ -262,7 +269,7 @@ ALTER TABLE `service`
 -- AUTO_INCREMENT для таблицы `appointments`
 --
 ALTER TABLE `appointments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `blog`
@@ -280,13 +287,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT для таблицы `commentators`
 --
 ALTER TABLE `commentators`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `galery`

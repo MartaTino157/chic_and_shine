@@ -6,8 +6,9 @@ require 'model/PriceList.php';
 require 'model/Category.php';
 require 'model/Galery.php';
 require 'model/Blog.php';
-require 'model/ReviewsList.php';
 require 'model/AppointmentForm.php';
+require 'model/ReviewsList.php';
+require 'model/ReviewsForm.php';
 
 
 include_once 'view/pricelist.php';

@@ -41,6 +41,9 @@
 	elseif ($path == 'reviews') {
 		$response = Controller::startReviews();
 	}
+	elseif($path == 'answerReviews'){
+		$response = Controller::answerReviews();
+	}
 	//страница error
 	else {
 		$response = Controller::error404();	
