@@ -2,10 +2,14 @@
 #C2B2AE
 #CFBEB0
 
+#CC8B7A
+
 темные тона
 #8F8381
 #423D3C
 */
+
+/* https://fontawesome.com/icons?d=listing&m=free
 
 /* ------------------- меню ------------------------*/
 nav {
@@ -51,6 +55,52 @@ nav .nav-item a {
 	padding-top: 10px;
 }
 /* -------------------- section -------------------------- */
+section{
+	text-align: justify;
+}
+
+.title h1 {
+	text-align: center;
+	padding: 30px;
+}
+
+.title-body {
+	margin: auto;
+	max-width: 83.333333%;
+	display: flex;
+  	align-items: center;
+	padding-bottom: 30px;
+}
+
+.plus {
+	margin: 20px;
+}
+
+.plus .col-md-3 p {
+	max-width: 80%;
+    margin: 10px auto;
+	display: flex;
+	align-items: center;
+}
+
+.plus i {
+	color: #CC8B7A;
+	font-size: 50px;
+	max-width: 25%;
+    margin: 10px auto;
+	display: flex;
+	padding-bottom: 30px;
+}
+
+.notice {
+	margin: 20px auto;
+	border-left: 5px solid #CC8B7A; 
+	padding: 10px 0 10px 20px;
+	max-width: 66.666667%;
+	display: flex;
+  	align-items: center;
+}
+
 
 /* ------------------- footer ------------------------*/
 

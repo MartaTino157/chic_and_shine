@@ -8,6 +8,8 @@
 
 	<!--<link rel="stylesheet" href="public/dist/css/lightbox.min.css">-->
 
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>
@@ -51,7 +53,7 @@
 	</nav>
 
 			<!-------------------- Верхнее меню ------------------->
-	<section>
+
 		<div class="mainContent">
 			<?php 
 				if(isset($content)) {
@@ -61,7 +63,6 @@
 				}
 			?>
 		</div>
-	</section>
 
 
 	<footer>
@@ -83,8 +84,13 @@
 	      		<div class="col-md-3">
 	      			<h3>Соц сети</h3>
 	      			<a href="">
-	     				<img src="images/bootstrap.svg" width="30" height="30" class="d-inline-block align-center">
+	     				
 	      			</a>
+	      			<i class="fab fa-instagram"></i>
+	      			<i class="fab fa-facebook-f"></i>
+	      			<i class="fab fa-pinterest-p"></i>
+	      			<i class="fab fa-vk"></i>
+	      			<i class="fab fa-twitter"></i>
 	      		</div>
 	    	</div>
 	    </div>
