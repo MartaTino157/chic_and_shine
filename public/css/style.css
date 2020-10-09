@@ -9,7 +9,8 @@
 #423D3C
 */
 
-/* https://fontawesome.com/icons?d=listing&m=free
+/* https://fontawesome.com/icons?d=listing&m=free*/
+
 
 /* ------------------- меню ------------------------*/
 nav {
@@ -74,6 +75,8 @@ section{
 
 .plus {
 	margin: 20px;
+	padding-bottom: 30px;
+	text-align: center;
 }
 
 .plus .col-md-3 p {
@@ -92,6 +95,16 @@ section{
 	padding-bottom: 30px;
 }
 
+@media (max-width: 576px){
+	.plus {
+		padding-left: 16vw;
+	}
+	.vertical {
+		width: 26vw;
+	}
+
+}
+
 .notice {
 	margin: 20px auto;
 	border-left: 5px solid #CC8B7A; 
@@ -102,16 +115,14 @@ section{
 }
 
 
+
 /* ------------------- footer ------------------------*/
 
 footer {
 	background-color: #C2B2AE;
 }
-/*------------------- вход для админа -------------------*/
-.form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
-    margin-top: 10vh;
+
+footer ul {
+	padding-top: 50px;
 }
+

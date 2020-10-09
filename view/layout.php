@@ -80,12 +80,11 @@
 	     			</ul>
 	   			</div>
 	   			<div class="col-md-3">
-	   			<div class="col-md-3">
+	   				
+	   			</div>
+	   			<div class="col-md-3"></div>
 	      		<div class="col-md-3">
 	      			<h3>Соц сети</h3>
-	      			<a href="">
-	     				
-	      			</a>
 	      			<i class="fab fa-instagram"></i>
 	      			<i class="fab fa-facebook-f"></i>
 	      			<i class="fab fa-pinterest-p"></i>
