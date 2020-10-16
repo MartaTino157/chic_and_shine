@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 02 2020 г., 10:18
+-- Время создания: Окт 16 2020 г., 10:25
 -- Версия сервера: 10.4.13-MariaDB
 -- Версия PHP: 7.2.31
 
@@ -212,6 +212,27 @@ INSERT INTO `service` (`id`, `name`, `price`, `description`) VALUES
 (3, 'Укрепление IBX', 12, 'IBX System – это профессиональная салонная процедура, а точнее, первая и единственная в своем роде лечебная система для проблемных ногтей.\r\n\r\nНазвание произошло от трех слов: Iceberg - айсберг, Big - огромный, X - цифра десять на латинице. А расшифровать смысл этого сочетания просто: препараты работают подобно айсбергу, основная часть которого скрыта от глаз. То есть процесс восстановления происходит внутри ногтевой пластины и распространяется, разумеется, на все 10 ногтей.\r\n\r\nИменно внутреннее действие и является главным отличием IBX от множества укрепляющих покрытий, представленных на рынке. Препарат сцепляется с поверхностью ногтевой пластины, проникает в структуру и становится ее частью. Поэтому он не снимается жидкостью для снятия акрила и гель-лака, а отрастает вместе с натуральным ногтем.'),
 (4, 'Дизайнерское покрытие', 5, NULL);
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `status` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `pass` varchar(20) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `status`, `email`, `pass`, `password`) VALUES
+(1, 'admin', 'admin@chicandshine.ee', '123456789', '$2y$10$j/pL/aGVfN4ciZU8ITKi6O0EUxsBFBFF1op./Ckd0Q2c3UUJzVCie');
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -262,6 +283,13 @@ ALTER TABLE `service`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`) USING BTREE;
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -306,6 +334,12 @@ ALTER TABLE `galery`
 --
 ALTER TABLE `service`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

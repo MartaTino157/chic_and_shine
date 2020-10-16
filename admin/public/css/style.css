@@ -1,4 +1,15 @@
+/*светлые тона
+#C2B2AE
+#CFBEB0
 
+#CC8B7A
+
+темные тона
+#8F8381
+#423D3C
+*/
+
+/* https://fontawesome.com/icons?d=listing&m=free*/
 /*------------------- вход для админа -------------------*/
 .form-signin {
     width: 100%;
@@ -6,4 +17,36 @@
     padding: 15px;
     margin: auto;
     margin-top: 10vh;
+}
+/* ------------------- меню ------------------------*/
+nav {
+	background-color: #C2B2AE;
+}
+nav a {
+	color: white;
+}
+nav form {
+	margin-left: 7vw;
+}
+
+@media (max-width: 1200px){
+	nav form {
+		margin-left: 0;
+	}
+}
+/*---------------------------------------!!!???-------*/
+.bg-darkmy {
+  background-color: #C2B2AE !important;
+}
+
+a.bg-darkmy:hover, a.bg-darkmy:focus,
+button.bg-darkmy:hover,
+button.bg-darkmy:focus {
+  background-color: #dae0e5 !important;
+}
+
+/*--------------------- категории -----------------------*/
+
+nav .nav-item a {
+	color: #423D3C;
 }

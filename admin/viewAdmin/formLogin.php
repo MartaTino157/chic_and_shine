@@ -1,5 +1,5 @@
 <?php
-if(isset($_SESSION['userID'])) {
+if(isset($_SESSION['userId'])) {
 	header('Location: login');
 }
 ?>
@@ -11,14 +11,14 @@ if(isset($_SESSION['userID'])) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="public/css/style.css">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 </head>
 <body class="text-center">
-	<form class="form-signin">
-		<img class="mb-4" src="images/bootstrap.svg" alt width="72" height="72">
+	<form class="form-signin" action="login" method="POST">
+		<img class="mb-4" src="images/logo1.png" alt width="200" height="40">
 		<h1 class="h3 mb-3 font-weight-normal">Войдите <br>в админ-панель</h1>
 		<label for="adminEmail" class="sr-only">Электронный адрес</label>
 		<input type="email" name="adminEmail" class="form-control" placeholder="Электронный адрес" required autofocus>

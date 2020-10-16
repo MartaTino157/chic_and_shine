@@ -12,6 +12,12 @@ elseif($path == 'login') {
 elseif($path == 'logout') {
 	$response = controllerAdmin::logoutAction();
 }
+elseif($path == 'adminService'){
+	$response = controllerAdminService::PriceList();
+}
+elseif($path == 'adminGalery'){
+	$response = controllerAdminGalery::getGalery();
+}
 else {
 	$response = controllerAdmin::error404();
 }
