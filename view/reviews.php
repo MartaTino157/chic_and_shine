@@ -2,6 +2,7 @@
 ob_start();
 ?>
 
+<section>
 <div class="row">
 	<div class="col-md-4">
 		<form role="form" method="POST" action="answerReviews">
@@ -52,7 +53,7 @@ ob_start();
 		?>
 	</div>
 </div>
-
+</section>
 <?php
 	$content = ob_get_clean();
 	include_once 'view/layout.php';

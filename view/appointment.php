@@ -2,7 +2,7 @@
 ob_start();
 ?>
 
-<div>
+<section>
 	<div class="row">
 		<div class="col-md-6">
 			<h3>Lorem Ipsum</h3>
@@ -85,8 +85,6 @@ ob_start();
 			</form>
 		</div>
 	</div>
-</div>
-<div>
 	<div class="row">
 		<div class="col-md-8">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2033.3708101886336!2d27.3970833519145!3d59.36015001550282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469465619310b463%3A0xcb2369327f42261b!2sKutse%2013%2C%20J%C3%B5hvi%2C%2041533%20Ida-Viru%20maakond!5e0!3m2!1sru!2see!4v1599820717267!5m2!1sru!2see" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -99,7 +97,7 @@ ob_start();
 			<h5>Lorem.Ipsum@lorem.com</h5>	
 		</div>
 	</div>
-</div>
+</section>
 
 <?php
 	$content = ob_get_clean();

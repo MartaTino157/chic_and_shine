@@ -1,5 +1,5 @@
 <?php
-class modelAdminGalery(){
+class modelAdminGalery {
 	public static function getAllImages(){
 		$query = "SELECT * FROM galery ORDER BY id DESC";
 		$db = new Database();

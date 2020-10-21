@@ -2,7 +2,7 @@
 ob_start();
 ?>
 
-<div>
+<section>
 	<div class="title">
 		<div class="row">
 			<div class="col-md-12">
@@ -18,16 +18,14 @@ ob_start();
 			</div>
 		</div>
 	</div>
-		<div>
-			<div class="row">
-				<?php 
-					ViewBlog::allBlog($arr);
-				?>
-			</div>
+	<div>
+		<div class="row">
+			<?php 
+				ViewBlog::allBlog($arr);
+			?>
 		</div>
-
 	</div>
-</div>
+</section>
 
 <?php
 	$content = ob_get_clean();

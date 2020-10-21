@@ -20,7 +20,7 @@ nav a {
 	color: white;
 }
 nav form {
-	margin-left: 7vw;
+	margin-left: 5vw;
 }
 
 @media (max-width: 1200px){
@@ -28,7 +28,6 @@ nav form {
 		margin-left: 0;
 	}
 }
-/*---------------------------------------!!!???-------*/
 .bg-darkmy {
   background-color: #C2B2AE !important;
 }
@@ -43,6 +42,9 @@ button.bg-darkmy:focus {
 
 nav .nav-item a {
 	color: #423D3C;
+}
+.sidebar{
+	
 }
 
 /* ------------------- карусель ------------------------*/
@@ -60,7 +62,7 @@ section{
 	text-align: justify;
 }
 
-.title h1 {
+.title h1, h2 {
 	text-align: center;
 	padding: 30px;
 }
@@ -68,7 +70,7 @@ section{
 .title-body {
 	margin: auto;
 	max-width: 83.333333%;
-	display: flex;
+	/*display: flex;*/
   	align-items: center;
 	padding-bottom: 30px;
 }

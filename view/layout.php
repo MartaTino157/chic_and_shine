@@ -14,6 +14,11 @@
 	<link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>
 <body>
+	<?php
+		$host = explode('?', $_SERVER['REQUEST_URI'])[0];
+		$num = substr_count($host, '/');
+		$path = explode('/',$host)[$num];
+	?>
 
 	<!-------------------- Верхнее меню ------------------->
 <div class="container">
@@ -26,24 +31,47 @@
 		</button>
 		<div class="navbar-collapse collapse show" id="navbarsDown">
 			<ul class="navbar-nav">
-				<li class="nav-item">
+
+				<?php 
+					if($path == "home"){ echo "<li class='nav-item active'>";
+					}else{echo "<li class='nav-item'>";}
+				?>
 					<a class="nav-link" href="home" id="1">Главная</a>
-				</li>
-				<li class="nav-item">
+				<?php echo "</li>";?>
+
+				<?php 
+					if($path == "service"){echo "<li class='nav-item active'>";
+					}else{echo "<li class='nav-item'>";}
+				?>
 					<a class="nav-link" href="service" id="2">Услуги</a>
-				</li>
-				<li class="nav-item">
+				<?php echo "</li>";?>
+
+				<?php 
+					if($path == "galery"){echo "<li class='nav-item active'>";
+					}else{echo "<li class='nav-item'>";}
+				?>
 					<a class="nav-link" href="galery" id="3">Галерея</a>
-				</li>
-				<li class="nav-item">
+				<?php echo "</li>";?>
+
+				<?php 
+					if($path == "blog"){echo "<li class='nav-item active'>";
+					}else{echo "<li class='nav-item'>";}
+				?>
 					<a class="nav-link" href="blog" id="4">Блог</a>
-				</li>
-				<li class="nav-item">
+				<?php echo "</li>";?>
+				<?php 
+					if($path == "appointment"){echo "<li class='nav-item active'>";
+					}else{echo "<li class='nav-item'>";}
+				?>
 					<a class="nav-link" href="appointment" id="5">Запись</a>
-				</li>
-				<li class="nav-item">
+				<?php echo "</li>";?>
+				<?php 
+					if($path == "reviews"){echo "<li class='nav-item active'>";
+					}else{echo "<li class='nav-item'>";}
+				?>
 					<a class="nav-link" href="reviews" id="6">Отзывы</a>
-				</li>
+				<?php echo "</li>";?>
+					
 			</ul>
 			<form class="form-inline">
 				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -70,21 +98,12 @@
 	      	<div class="row">
 	      		<div class="col-md-3">
 	      			<img src="images/logo1.png" width="200" height="40" class="d-inline-block align-top" alt="" loading="lazy">
-	     			<ul>
-	      				<li>Главная</li>
-	      				<li>Услуги</li>
-	      				<li>Галерея</li>
-	      				<li>Блог</li>
-	      				<li>Запись</li>
-	  					<li>Отзывы</li>
-	     			</ul>
 	   			</div>
 	   			<div class="col-md-3">
 	   				
 	   			</div>
 	   			<div class="col-md-3"></div>
 	      		<div class="col-md-3">
-	      			<h3>Соц сети</h3>
 	      			<i class="fab fa-instagram"></i>
 	      			<i class="fab fa-facebook-f"></i>
 	      			<i class="fab fa-pinterest-p"></i>
