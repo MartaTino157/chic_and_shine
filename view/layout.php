@@ -33,7 +33,7 @@
 			<ul class="navbar-nav">
 
 				<?php 
-					if($path == "home"){ echo "<li class='nav-item active'>";
+					if($path == "home" OR $path == ""){ echo "<li class='nav-item active'>";
 					}else{echo "<li class='nav-item'>";}
 				?>
 					<a class="nav-link" href="home" id="1">Главная</a>
