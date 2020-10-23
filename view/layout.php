@@ -92,7 +92,7 @@
 			?>
 		</div>
 
-	<footer class="navbar fixed-bottom">
+	<footer>
 		<div class="p-3 mb-2 text-white">
 	      	<div class="row">
 	      		<div class="col-md-3">

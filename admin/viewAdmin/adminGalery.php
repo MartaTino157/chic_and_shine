@@ -10,7 +10,7 @@ ob_start();
 				<nav class="navbar navbar-expand-md navbar-light bg-light">
 					<ul class="nav flex-column">
 						<?php
-							controllerAdminGalery::AllCategory();
+							controllerAdminCategory::AllCategory();
 						?>
 					</ul>
 				</nav>
@@ -18,7 +18,7 @@ ob_start();
 		</div>
 		<div class="col-md-9">
 		<?php
-			ViewImagesAdmin::allImages($arr);
+			ViewImages::allImages($arr);
 		?>
 		</div>
 	</div>
@@ -27,5 +27,5 @@ ob_start();
 
 <?php
 	$content = ob_get_clean();
-	include_once 'view/layout.php';
+	include_once 'viewAdmin/templates/layout.php';
 ?>

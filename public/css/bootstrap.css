@@ -4768,7 +4768,7 @@ input[type="button"].btn-block {
 .navbar-darkmy .navbar-nav .nav-link.show,
 .navbar-darkmy .navbar-nav .nav-link.active {
   color: #fff;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .navbar-darkmy .navbar-toggler {
@@ -8085,8 +8085,6 @@ button.bg-dark:focus {
   bottom: 0;
   left: 0;
   z-index: 1030;
-  display: inline;
-  width: 90%;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {

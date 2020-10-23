@@ -1,16 +1,13 @@
 <?php
 class controllerAdminGalery{
-	public static function getGalery(){
-		$arr=modelAdminGalery::getAllImages();
-		include_once 'viewAdmin/galeryEdit.php';
+	public function openGalery() {
+		$arr = adminGalery::getAllImages();
+		include_once('viewAdmin/adminGalery.php');
 	}
-	public static function AllCategory() {
-		$arr = modelAdminGalery::getAllCategory();
-		include_once 'viewAdmin/galeryEdit.php';
-	}
+	
 	public static function imageByCatID($id) {
-		$arr = modelAdminGalery::getImagesByCategoryID($id);
-		include_once 'viewAdmin/galeryEdit.php';
+		$arr = adminGalery::getImagesByCategoryID($id);
+		include_once 'viewAdmin/adminGalery.php';
 	}
 }
 ?>

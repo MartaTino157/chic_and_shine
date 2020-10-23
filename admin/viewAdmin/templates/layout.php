@@ -9,6 +9,11 @@
 	
 </head>
 <body>
+	<?php
+		$host = explode('?', $_SERVER['REQUEST_URI'])[0];
+		$num = substr_count($host, '/');
+		$path = explode('/',$host)[$num];
+	?>
 
 <div class="container">
 
@@ -25,18 +30,31 @@
 		</button>
 		<div class="navbar-collapse collapse show" id="navbarsDown">
 			<ul class="navbar-nav">
-				<li class="nav-item">
+				<?php 
+					if($path == "adminService"){echo "<li class='nav-item active'>";
+					}else{echo "<li class='nav-item'>";}
+				?>
 					<a class="nav-link" href="adminService" id="1">Услуги</a>
-				</li>
-				<li class="nav-item">
+				<?php echo "</li>";?>
+				<?php 
+					if($path == "adminGalery"){echo "<li class='nav-item active'>";
+					}else{echo "<li class='nav-item'>";}
+				?>
 					<a class="nav-link" href="adminGalery" id="2">Галерея</a>
-				</li>
-				<li class="nav-item">
+				<?php echo "</li>";?>
+				<?php 
+					if($path == "adminBlog"){echo "<li class='nav-item active'>";
+					}else{echo "<li class='nav-item'>";}
+				?>
 					<a class="nav-link" href="adminBlog" id="3">Блог</a>
-				</li>
-				<li class="nav-item">
+				<?php echo "</li>";?>
+				<?php 
+					if($path == "adminReviews"){echo "<li class='nav-item active'>";
+					}else{echo "<li class='nav-item'>";}
+				?>
 					<a class="nav-link" href="adminReviews" id="4">Отзывы</a>
-				</li>
+				<?php echo "</li>";?>
+
 				<li class="nav-item">
 					<a class="nav-link" href="logout" id="5">Выйти</a>
 				</li>

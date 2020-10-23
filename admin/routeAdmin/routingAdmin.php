@@ -12,12 +12,32 @@ elseif($path == 'login') {
 elseif($path == 'logout') {
 	$response = controllerAdmin::logoutAction();
 }
+//=================================================
 elseif($path == 'adminService'){
 	$response = controllerAdminService::PriceList();
 }
-elseif($path == 'adminGalery'){
-	$response = controllerAdminGalery::getGalery();
+elseif($path=='addItemPrice'){
+	$response=controllerAdminService::addItemPriceForm();
 }
+elseif($path=='addItemPriceResult') {
+	$response=controllerAdminService::addItemPriceResult();
+}
+//=================================================
+elseif($path == 'adminGalery'){
+	$response = controllerAdminGalery::openGalery();
+}
+//=================================================
+elseif ($path == 'adminCategory' and isset($_GET['id'])) {
+	$response = controllerAdminGalery::imageByCatID($_GET['id']);	
+}
+//=================================================
+elseif ($path == 'adminBlog') {
+	$response = controllerAdminBlog::openBlog();
+}
+//=================================================
+elseif ($path == 'adminReviews') {
+		$response = comtrollerAdminReviews::reviewsList();
+	}
 else {
 	$response = controllerAdmin::error404();
 }
