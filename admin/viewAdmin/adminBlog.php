@@ -3,6 +3,7 @@ ob_start();
 ?>
 <section>
 	<div>
+		<a class="btn btn-outline-success" href="addArticle" role="button">Добавить запись</a>
 		<div class="row">
 			<?php 
 				foreach($arr as $value) {

@@ -16,27 +16,45 @@ elseif($path == 'logout') {
 elseif($path == 'adminService'){
 	$response = controllerAdminService::PriceList();
 }
-elseif($path=='addItemPrice'){
-	$response=controllerAdminService::addItemPriceForm();
+elseif($path=='addService'){
+	$response = controllerAdminService::addServiceForm();
 }
-elseif($path=='addItemPriceResult') {
-	$response=controllerAdminService::addItemPriceResult();
+elseif($path=='addServiceResult') {
+	$response = controllerAdminService::addServiceResult();
 }
 //=================================================
 elseif($path == 'adminGalery'){
 	$response = controllerAdminGalery::openGalery();
 }
+elseif($path=='addGaleryPic'){
+	$response = controllerAdminGalery::addGaleryPicForm();
+}
+elseif($path=='addGaleryPicResult') {
+	$response = controllerAdminGalery::addGaleryPicResult();
+}
 //=================================================
 elseif ($path == 'adminCategory' and isset($_GET['id'])) {
 	$response = controllerAdminGalery::imageByCatID($_GET['id']);	
+}
+elseif($path=='addCategory'){
+	$response = controllerAdminCategory::addCategoryForm();
+}
+elseif($path=='addCategoryResult') {
+	$response = controllerAdminCategory::addCategoryResult();
 }
 //=================================================
 elseif ($path == 'adminBlog') {
 	$response = controllerAdminBlog::openBlog();
 }
+elseif($path=='addArticle'){
+	$response = controllerAdminBlog::addArticleForm();
+}
+elseif($path=='addArticleResult') {
+	$response = controllerAdminBlog::addArticleResult();
+}
 //=================================================
 elseif ($path == 'adminReviews') {
-		$response = comtrollerAdminReviews::reviewsList();
+	$response = comtrollerAdminReviews::reviewsList();
 	}
 else {
 	$response = controllerAdmin::error404();

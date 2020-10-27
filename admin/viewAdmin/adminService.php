@@ -2,7 +2,8 @@
 ob_start();
 ?>
 <div class="row">
-	<div class="col-md-8">
+	<div class="col-md-12">
+		<a class="btn btn-outline-success" href="addService" role="button">Добавить услугу</a>
 		<table class="table table-hover">
 			<thead class="thead-light">
 				<tr>

@@ -9,7 +9,7 @@ ob_start();
 			echo "<div class='col-md-8'>";
 			echo "<blockquote>";
 			echo "<p>".$value['message']."</p>";
-			echo "<p>Автор: ".$value['name']."</p>";
+			echo "<p>Автор: ".$value['email']."(".$value['name'].")</p>";
 			echo "</blockquote>";
 			echo "</div>";
 

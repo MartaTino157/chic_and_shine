@@ -4,13 +4,12 @@ class controllerAdminService{
 		$arr=modelAdminService::getPriceList();
 		include_once 'viewAdmin/adminService.php';
 	}
-	public static function addItemPriceForm() {
-		$arr = modelAdminCategory::getCategoryList();
-		include_once('viewAdmin/addPriceForm.php');
+	public static function addServiceForm() {
+		include_once('viewAdmin/serviceAddForm.php');
 	}
-	public static function addItemPriceResult() {
-		$test = modelAdminService::getPriceAdd();
-		include_once('viewAdmin/addPriceForm.php');
+	public static function addServiceResult() {
+		$test = modelAdminService::getServiceAdd();
+		include_once('viewAdmin/serviceAddForm.php');
 	}
 }
 ?>

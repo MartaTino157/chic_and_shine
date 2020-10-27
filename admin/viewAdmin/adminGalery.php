@@ -4,6 +4,7 @@ ob_start();
 
 <section>
 
+	<a class="btn btn-outline-success" href="addGaleryPic" role="button">Добавить фотографию</a>
 		<div class="row">
 			<div class="col-md-3">
 				<div class="sidebar">
@@ -14,6 +15,7 @@ ob_start();
 						?>
 					</ul>
 				</nav>
+				<a class="btn btn-outline-success" href="addCategory" role="button">Добавить категорию</a>
 			</div>
 		</div>
 		<div class="col-md-9">
