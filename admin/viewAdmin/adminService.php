@@ -21,7 +21,7 @@ ob_start();
 							echo '<td>'.$row['name'].'</td>';
 							echo '<td>'.$row['price'].'€</td>';
 							echo '<td>
-							<a href="priceEdit?id='.$row['id'].'" class="btn btn btn-outline-warning">Редактировать</a>
+							<a href="editService?id='.$row['id'].'" class="btn btn btn-outline-warning">Редактировать</a>
 							<a href="priceDelete?id='.$row['id'].'" class="btn btn btn-outline-danger">Удалить</a>
 								</td>';
 						echo '</tr>';

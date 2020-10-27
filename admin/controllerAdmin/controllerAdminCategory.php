@@ -11,5 +11,13 @@ class controllerAdminCategory{
 		$test = modelAdminCategory::getCategoryAdd();
 		include_once('viewAdmin/categoryAddForm.php');
 	}
+	public static function editCategoryForm($id) {
+		$detail=modelAdminCategory::getCategoryDetail($id);
+		include_once('viewAdmin/categoryEditForm.php');
+	}
+	public static function editCategoryResult($id) {
+		$test=modelAdminCategory::getCategoryEdit($id);
+		include_once('viewAdmin/categoryEditForm.php');
+	}
 }
 ?>

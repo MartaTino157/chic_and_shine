@@ -3,27 +3,30 @@ ob_start();
 ?>
 
 <section>
+	<h3>Категории</h3>
+	<a class="btn btn-outline-success" href="addCategory" role="button">Добавить категорию</a>
+	<table class="table table-hover">
+			<thead class="thead-light">
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Название категории</th>
+					<th scope="col">Управление</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php 
+					controllerAdminCategory::AllCategory();
+				?>
+			</tbody>
+		</table>
 
 	<a class="btn btn-outline-success" href="addGaleryPic" role="button">Добавить фотографию</a>
-		<div class="row">
-			<div class="col-md-3">
-				<div class="sidebar">
-				<nav class="navbar navbar-expand-md navbar-light bg-light">
-					<ul class="nav flex-column">
-						<?php
-							controllerAdminCategory::AllCategory();
-						?>
-					</ul>
-				</nav>
-				<a class="btn btn-outline-success" href="addCategory" role="button">Добавить категорию</a>
-			</div>
+
+		<div>
+			<?php
+				ViewImages::allImages($arr);
+			?>
 		</div>
-		<div class="col-md-9">
-		<?php
-			ViewImages::allImages($arr);
-		?>
-		</div>
-	</div>
 </section>
 
 
