@@ -1,12 +1,12 @@
 <?php ob_start();?>
 
-<h3>Добавление статьи блога</h3>
+<h3>Редактирование статьи блога</h3>
 		<?php
 		if(isset($test)) {
 			if($test==true) {
 				?>
 				<div class="alert alert-info">
-					<strong>Статья успешно добавлена</strong>
+					<strong>Запись успешно обновлена</strong>
 					<br>
 					<a href="adminBlog" class="btn btn-outline-primary">Назад</a>
 				</div>
@@ -14,14 +14,14 @@
 			}elseif ($test==false){
 			?>
 			<div class="alert alert-warning">
-				<strong>Ошибка добавления статьи!</strong>
+				<strong>Ошибка обновления записи!</strong>
 				<br>
 				<a href="adminBlog" class="btn btn-outline-primary">Назад</a>
 			</div>
 			<?php
 			}
 		}else{ ?>
-			<form method="POST" action="addArticleResult" enctype="multipart/form-data">
+			<form method="POST" action="editArticleResult?id=<?php echo $id;?>" enctype="multipart/form-data">
 				<div class="form-row">
 					<div class="form-group col-md-3">
 						<label>
@@ -29,7 +29,7 @@
 						</label>
 					</div>
 					<div class="form-group col-md-9">
-						<input type="text" name="title" class="form-control" required autofocus>
+						<input type="text" name="title" class="form-control" value="<?php echo $detail['title'];?>" required autofocus>
 					</div>
 				</div>
 				<div class="form-row">
@@ -39,7 +39,7 @@
 						</label>
 					</div>
 					<div class="form-group col-md-9">
-						<textarea class="form-control" rows="15" name="article" required></textarea>
+						<textarea class="form-control" rows="15" name="article" required><?php echo $detail['article'];?></textarea>
 					</div>
 				</div>
 				<div class="form-row">
@@ -49,7 +49,8 @@
 						</label>
 					</div>
 					<div class="form-group col-md-9">
-						<input type="file" name="picture" class="form-control-file" required>
+						<?php echo '<img src="data:image/jpeg;base64,'.base64_encode($detail['image']).'"width=150 />';?>
+						<input type="file" name="image" class="form-control-file">
 					</div>
 				</div>
 				<div class="form-group row">

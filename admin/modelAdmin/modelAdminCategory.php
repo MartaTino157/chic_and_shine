@@ -44,5 +44,17 @@ class modelAdminCategory{
 		}
 		return $test;
 	}
+	public static function getCategoryDelete($id) {
+		$test=false;
+		if(isset($_POST['save'])){
+			$sql="DELETE FROM `category` WHERE `category`.`id` = ".$id;
+			$db = new Database();
+			$item = $db->executeRun($sql);
+			if($item==true){
+				$test=true;
+			}
+		} 
+		return $test;
+	}
 }
 ?>

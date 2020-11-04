@@ -19,5 +19,12 @@ class controllerAdminCategory{
 		$test=modelAdminCategory::getCategoryEdit($id);
 		include_once('viewAdmin/categoryEditForm.php');
 	}
+	public static function deleteCategoryForm($id){
+		include_once('viewAdmin/categoryDeleteForm.php');
+	}
+	public static function deleteCategoryResult($id) {
+		$test=modelAdminCategory::getCategoryDelete($id);
+		include_once('viewAdmin/categoryDeleteForm.php');
+	}
 }
 ?>

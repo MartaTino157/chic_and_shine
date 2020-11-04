@@ -28,6 +28,18 @@ class modelAdminGalery {
 		}
 		return $test;
 	}
+	public static function getGaleryPicDelete($id) {
+		$test=false;
+		if(isset($_POST['save'])){
+			$sql="DELETE FROM `galery` WHERE `galery`.`id` = ".$id;
+			$db = new Database();
+			$item = $db->executeRun($sql);
+			if($item==true){
+				$test=true;
+			}
+		} 
+		return $test;
+	}
 
 }
 ?>

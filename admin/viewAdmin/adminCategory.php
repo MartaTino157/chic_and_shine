@@ -9,7 +9,7 @@
 				echo "<td><a href='adminCategory?id=".$value['id']."'>".$value['name']."</a></td>";
 				echo '<td>
 				<a href="editCategory?id='.$value['id'].'" class="btn btn btn-outline-warning">Редактировать</a>
-				<a href="deleteCategory?id='.$value['id'].'" class="btn btn btn-outline-danger">Удалить</a>
+				<a href="delCategory?id='.$value['id'].'" class="btn btn btn-outline-danger">Удалить</a>
 					</td>';
 			echo '</tr>';	
 		}

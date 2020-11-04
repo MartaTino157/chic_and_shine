@@ -48,5 +48,18 @@ class modelAdminService{
 		} 
 		return $test;
 	}
+	public static function getServiceDelete($id) {
+		$test=false;
+		if(isset($_POST['save'])){
+			$sql="DELETE FROM `service` WHERE `service`.`id` = ".$id;
+			$db = new Database();
+			$item = $db->executeRun($sql);
+			if($item==true){
+				$test=true;
+			}
+		} 
+		return $test;
+	}
+
 }
 ?>

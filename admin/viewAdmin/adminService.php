@@ -22,7 +22,7 @@ ob_start();
 							echo '<td>'.$row['price'].'€</td>';
 							echo '<td>
 							<a href="editService?id='.$row['id'].'" class="btn btn btn-outline-warning">Редактировать</a>
-							<a href="priceDelete?id='.$row['id'].'" class="btn btn btn-outline-danger">Удалить</a>
+							<a href="delService?id='.$row['id'].'" class="btn btn btn-outline-danger">Удалить</a>
 								</td>';
 						echo '</tr>';
 					}

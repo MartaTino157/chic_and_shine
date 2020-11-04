@@ -6,7 +6,7 @@
 			if($test==true) {
 				?>
 				<div class="alert alert-info">
-					<strong>Запись успешно добавлена</strong>
+					<strong>Запись успешно отредактирована</strong>
 					<br>
 					<a href="adminGalery" class="btn btn-outline-primary">Назад</a>
 				</div>
@@ -14,14 +14,14 @@
 			}elseif ($test==false){
 			?>
 			<div class="alert alert-warning">
-				<strong>Ошибка добавления записи!</strong>
+				<strong>Ошибка редактирования записи!</strong>
 				<br>
 				<a href="adminGalery" class="btn btn-outline-primary">Назад</a>
 			</div>
 			<?php
 			}
 		}else{ ?>
-			<form method="POST" action="addCategoryResult" enctype="multipart/form-data">
+			<form method="POST" action="editCategoryResult" enctype="multipart/form-data">
 				<table class="table">
 					<thead class="thead-light">
 						<tr>

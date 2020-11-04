@@ -3,7 +3,7 @@ ob_start();
 ?>
 <section>
 	<div>
-		<a class="btn btn-outline-success" href="addArticle" role="button">Добавить запись</a>
+		<a class="btn btn-outline-success" href="addArticle" role="button">Добавить статью</a>
 		<div class="row">
 			<?php 
 				foreach($arr as $value) {
@@ -23,8 +23,8 @@ ob_start();
 					echo "</div>";
 
 					echo "<div class='col-md-2'>";
-					echo '<a href="articleEdit?id='.$value['id'].'" class="btn btn btn-outline-warning">Редактировать</a>';
-					echo '<a href="articleDelete?id='.$value['id'].'" class="btn btn btn-outline-danger">Удалить</a>';
+					echo '<a href="editArticle?id='.$value['id'].'" class="btn btn btn-outline-warning">Редактировать</a>';
+					echo '<a href="delArticle?id='.$value['id'].'" class="btn btn btn-outline-danger">Удалить</a>';
 					echo "</div>";
 				}
 			?>

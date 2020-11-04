@@ -19,5 +19,13 @@ class controllerAdminService{
 		$test=modelAdminService::getServiceEdit($id);
 		include_once('viewAdmin/serviceEditForm.php');
 	} 
+	public static function deleteServiceForm($id){
+		//$detail=modelAdminService::getServiceDetail($id);
+		include_once('viewAdmin/serviceDeleteForm.php');
+	}
+	public static function deleteServiceResult($id) {
+		$test=modelAdminService::getServiceDelete($id);
+		include_once('viewAdmin/serviceDeleteForm.php');
+	} 
 }
 ?>
