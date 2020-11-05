@@ -90,19 +90,17 @@
 					echo '<h1>Content is gone!</h1>';
 				}
 			?>
-		</div>
+		
+
 
 	<footer>
 		<div class="p-3 mb-2 text-white">
 	      	<div class="row">
-	      		<div class="col-md-3">
+	      		<div class="col-md-4">
 	      			<img src="images/logo1.png" width="200" height="40" class="d-inline-block align-top" alt="" loading="lazy">
 	   			</div>
-	   			<div class="col-md-3">
-	   				
-	   			</div>
-	   			<div class="col-md-3"></div>
-	      		<div class="col-md-3">
+	   			<div class="col-md-4"></div>
+	      		<div class="col-md-4">
 	      			<i class="fab fa-instagram"></i>
 	      			<i class="fab fa-facebook-f"></i>
 	      			<i class="fab fa-pinterest-p"></i>
@@ -112,6 +110,7 @@
 	    	</div>
 	    </div>
 	</footer>
+
 	
 </div>
 

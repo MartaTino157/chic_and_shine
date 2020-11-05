@@ -60,7 +60,7 @@ ob_start();
 	<div class="title-body">
 		<div class="row">
 			<div class="col-md-12">
-				<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+				<p>Мастера салона используют новейшие приспособления для ухода за вашими ногтями, полировки и создания неповторимой формы. Материалы качественные, долго держатся и не портят Ваши ноготочки. В салоне Вы проведете не более 2 часов в абсолютном комфорте. Нам удалось сделать это удовольствие еще более удобным, подобрав <strong>максимально доступные цены</strong> на наши услуги. 
 				</p>
 			</div>
 		</div>

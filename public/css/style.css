@@ -11,17 +11,24 @@
 
 /* https://fontawesome.com/icons?d=listing&m=free*/
 
+body {
+	height: 100%;
+}
 /* ------------------- меню ------------------------*/
 nav {
 	background-color: #C2B2AE;
 }
-nav a {
+.navbar-collapse nav a {
 	color: white;
 }
 nav form {
 	margin-left: 5vw;
 }
-
+nav .nav-item a:hover {
+	  -webkit-transform: scale(1.1);
+	  -ms-transform: scale(1.1);
+	  transform: scale(1.1);
+	}
 @media (max-width: 1200px){
 	nav form {
 		margin-left: 0;
@@ -35,15 +42,6 @@ a.bg-darkmy:hover, a.bg-darkmy:focus,
 button.bg-darkmy:hover,
 button.bg-darkmy:focus {
   background-color: #dae0e5 !important;
-}
-
-/*--------------------- категории -----------------------*/
-
-nav .nav-item a {
-	color: #423D3C;
-}
-.sidebar{
-	
 }
 
 /* ------------------- карусель ------------------------*/
@@ -69,7 +67,6 @@ section{
 .title-body {
 	margin: auto;
 	max-width: 83.333333%;
-	/*display: flex;*/
   	align-items: center;
 	padding-bottom: 30px;
 }
@@ -103,7 +100,6 @@ section{
 	.vertical {
 		width: 26vw;
 	}
-
 }
 
 .notice {
@@ -114,8 +110,113 @@ section{
 	display: flex;
   	align-items: center;
 }
+/*--------------------- категории -----------------------*/
+.sidebar {
+	padding: 10px;
+	margin: 10px 0px 20px 0px;
+}
 
+.sidebar-item {
+	color: #C2B2AE;
+	text-transform: uppercase;
+	padding: 10px;
+}
+.sidebar-item:hover {
+	  color: #423D3C;
+	  text-decoration: none;
+	  /*font-weight: bold;*/
+}
 
+/*-------------------- galery ------------------------*/
+.galery-capture {
+	margin-bottom: 10px;
+}
+.galery-capture img, .blog-capture img {
+	max-width: 250px;
+
+}
+@media (max-width: 1200px) {
+	.galery-capture img, .blog-capture img {	
+		width: 20.8333333333vw;
+	}
+	.article-capture img {
+		width: 50vw;
+		margin: 2.5vw;
+	}
+	.read, .b-appoint {
+		padding-left: 30vw;
+	}
+	.back {
+		padding-left: 33.3333333333vw;
+	}
+}
+@media (max-width: 990px) {
+	.galery-capture img, .blog-capture img {	
+		width: 25.2525252525vw;
+	}
+}
+@media (max-width: 767px) {
+	.galery-capture img, .blog-capture img {
+		width: 30vw;
+	}
+	.article-capture img {
+		width: 60vw;
+	}
+}
+@media (max-width: 600px) {
+	.galery-capture img, .blog-capture img {
+		width: 44.7227191413vw;
+	}
+}
+@media (max-width: 284px) {
+	.galery-capture img, .blog-capture img {
+		width: 88.0281690141vw;
+		margin-left: 20px;
+	}
+}
+/*-------------------- blog --------------------------*/
+.blog-capture {
+	margin: auto;
+    max-width: 60%;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.read {
+	padding-left: 380px;
+    margin-bottom: 15px;
+}
+.title-body h3{
+	padding: 20px; 
+}
+.article-capture img {
+	max-width: 600px;
+	margin: 30px;
+}
+.article-capture{
+	margin: auto;
+    max-width: 60%;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.back {
+	padding-left: 400px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+/* ------------------- appointment -------------------*/
+.h-appoint{
+	padding: 30px;
+}
+.b-appoint {
+	padding-left: 380px;
+    margin-bottom: 15px;
+}
+.contact {
+	background-color: #423D3C;
+}
+.map {
+	padding: 50px;
+}
 
 /* ------------------- footer ------------------------*/
 
@@ -123,7 +224,12 @@ footer {
 	background-color: #C2B2AE;
 }
 
-footer ul {
-	padding-top: 50px;
+footer i {
+	padding: 10px;
+	font-size: 20px;
 }
-
+footer i:hover {
+	  -webkit-transform: scale(1.5);
+	  -ms-transform: scale(1.5);
+	  transform: scale(1.5);
+}
