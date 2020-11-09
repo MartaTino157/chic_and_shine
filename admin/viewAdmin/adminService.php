@@ -3,7 +3,10 @@ ob_start();
 ?>
 <div class="row">
 	<div class="col-md-12">
-		<a class="btn btn-outline-success" href="addService" role="button">Добавить услугу</a>
+		<div class="but">
+			<a class="btn btn-outline-success" href="addService" role="button">Добавить услугу</a>
+		</div>
+		
 		<table class="table table-hover">
 			<thead class="thead-light">
 				<tr>

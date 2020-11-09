@@ -4,8 +4,8 @@
 	<title>Chic&Shine</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" type="text/css" href="../public/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../public/css/style.css">
+	<link rel="stylesheet" type="text/css" href="./public/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./public/css/style.css">
 	
 </head>
 <body>
@@ -18,7 +18,7 @@
 <div class="container">
 
 	<?php 
-			if (isset($_SESSION["userId"]) && isset($_SESSION["sessionId"]) && isset($_SESSION["status"]) && $_SESSION["status"]=="admin") {
+		if (isset($_SESSION["userId"]) && isset($_SESSION["sessionId"]) && isset($_SESSION["status"]) && $_SESSION["status"]=="admin") {
 	?>
 
 	<nav class="navbar navbar-expand-lg navbar-darkmy bg-darkmy">
@@ -59,10 +59,10 @@
 					<a class="nav-link" href="logout" id="5">Выйти</a>
 				</li>
 			</ul>
-			<form class="form-inline">
+			<!--<form class="form-inline">
 				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 				<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-			</form>
+			</form>-->
 		</div>		
 	</nav>
 

@@ -34,7 +34,6 @@ nav form {
 		margin-left: 0;
 	}
 }
-/*---------------------------------------!!!???-------*/
 .bg-darkmy {
   background-color: #C2B2AE !important;
 }
@@ -44,9 +43,31 @@ button.bg-darkmy:hover,
 button.bg-darkmy:focus {
   background-color: #dae0e5 !important;
 }
-
-/*--------------------- категории -----------------------*/
-
+h3 {
+	text-align: center;
+	padding-top: 30px;
+}
+h4 {
+	text-align: center;
+}
+.but {
+	margin: 20px;
+}
+.but2 {
+	margin: 10px;
+}
+.but3 {
+	margin-right: 10px;
+}
 nav .nav-item a {
 	color: #423D3C;
+}
+blockquote {
+	margin-left: 10px; 
+}
+.but4 {
+	display: flex;
+	align-items: center;
+	max-width: 90px;
+	margin: auto;
 }

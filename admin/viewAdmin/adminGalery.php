@@ -4,7 +4,10 @@ ob_start();
 
 <section>
 	<h3>Категории</h3>
-	<a class="btn btn-outline-success" href="addCategory" role="button">Добавить категорию</a>
+	<div class="but">
+		<a class="btn btn-outline-success" href="addCategory" role="button">Добавить категорию</a>
+	</div>
+	
 	<table class="table table-hover">
 			<thead class="thead-light">
 				<tr>
@@ -19,10 +22,11 @@ ob_start();
 				?>
 			</tbody>
 		</table>
-
-	<a class="btn btn-outline-success" href="addGaleryPic" role="button">Добавить фотографию</a>
-
-		<div>
+		<h3>Изображения</h3>
+		<div class="but">
+			<a class="btn btn-outline-success" href="addGaleryPic" role="button">Добавить фотографию</a>
+		</div>
+		<div class="row">
 			<?php
 				ViewImages::allImages($arr);
 			?>

@@ -14,7 +14,7 @@ ob_start();
 			echo "</div>";
 
 			echo '<div class="col-md-3">';
-			echo '<a href="publishReview?id='.$value['id'].'" class="btn btn btn-outline-success">Опубликовать</a>';
+			echo '<a href="publishReview?id='.$value['id'].'" class="btn btn btn-outline-success but3">Опубликовать</a>';
 			echo '<a href="delReview?id='.$value['id'].'" class="btn btn btn-outline-danger">Удалить</a>';
 			echo "</div>";
 		}
@@ -24,7 +24,7 @@ ob_start();
 		<h4>Опубликованные отзывы</h4>
 		<br>
 		<?php
-			echo '<a href="published" class="btn btn btn-outline-primary">Перейти</a>';
+			echo '<a href="published" class="btn btn btn-outline-primary but4">Перейти</a>';
 		?>
 </section>
 

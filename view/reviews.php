@@ -4,7 +4,19 @@ ob_start();
 
 <section>
 <div class="row">
-	<div class="col-md-4">
+	<div class="col-md-12">
+		<h2>Страничка отзывов</h2>
+		<div class="comment">
+			<p>
+				Здесь вы можете оставить сообщение о работе нашего салона или сайта. Будем рады положительным отзывам, а также предложениям по модернизации.
+			</p>
+			<p>
+				Обратите внимание, что не все отзывы публикуются. Со всеми вопросами обращайтесь к администратору в салоне или по электронному адресу со страницы <a href="appointment"><strong>записи</strong></a>.
+			</p>
+		</div>
+	</div>
+		
+	<div class="rew">
 		<form role="form" method="POST" action="answerReviews">
 			<fieldset>
 				<legend>Оставить сообщение</legend>
@@ -40,13 +52,11 @@ ob_start();
 			</fieldset>
 		</form>
 	</div>
-	<div class="col-md-5">
-		<h2>Lorem Ipsum</h2>
-		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-	</div>
+		
+
 </div>
-<div>
-	<h3>Список отзывов</h3>
+<div class="border">
+	<h4>Отзывы</h4>
 	<div class="row">
 		<?php
 			VeiwReviews::Reviews($arr);
