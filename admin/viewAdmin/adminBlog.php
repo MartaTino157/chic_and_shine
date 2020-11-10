@@ -10,7 +10,7 @@ ob_start();
 			<?php 
 				foreach($arr as $value) {
 					echo "<div class='col-md-4'>";
-					echo '<img src="data:image/jpeg;base64,'.base64_encode($value['image']).'"width=250 />';
+					echo '<img src="../images/galery/'.$value['image'].'"width=250>';
 					echo "</div>";
 
 					echo "<div class='col-md-6'>";

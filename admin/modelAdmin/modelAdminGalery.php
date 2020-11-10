@@ -15,10 +15,25 @@ class modelAdminGalery {
 	public static function getGaleryPicAdd(){
 		$test = false;
 		if(isset($_POST['save'])){
-			$image=addslashes(file_get_contents($_FILES['picture']['tmp_name']));
+			//$image=addslashes(file_get_contents($_FILES['picture']['tmp_name']));
+
+			$image = basename($_FILES['picture']['name']); //имя загруженного файла
+				if($image!=""){
+				$uploaddir = '../images/galery/';
+				$uploadfile = $uploaddir . basename($_FILES['picture']['name']);
+				copy($_FILES['picture']['tmp_name'], $uploadfile);
+			}
+				/*else{
+					$image ="newsphoto.png";//картинка по умолчанию
+			}*/
+
 			if($image != ""){
 				$idCat=$_POST['idCat'];
-				$sql="INSERT INTO `galery`(`id`, `image`, `category`) VALUES (NULL, '$image', '$idCat')";
+				if($idCat == "null" || $idCat == "NULL" ) {
+					$sql="INSERT INTO `galery`(`id`, `image`, `category`) VALUES (NULL, '$image', NULL)";
+				}else{
+					$sql="INSERT INTO `galery`(`id`, `image`, `category`) VALUES (NULL, '$image', '$idCat')";
+				}
 				$db = new Database();
 				$item = $db->executeRun($sql);
 				if($item==true) {

@@ -35,7 +35,7 @@
 							<td><input type="file" name="picture" class="form-control-file" autofocus required></td>
 							<td>
 								<select name="idCat" class="form-control">
-									<option value="0">Без категории</option>
+									<option value="NULL">Без категории</option>
 								<?php
 								foreach($arr as $row) {
 									echo '<option value="'.$row['id'].'">'.$row['name'].'</option>';

@@ -49,7 +49,7 @@
 						</label>
 					</div>
 					<div class="form-group col-md-9">
-						<?php echo '<img src="data:image/jpeg;base64,'.base64_encode($detail['image']).'"width=150 />';?>
+						<?php echo '<img src="../images/galery/'.$detail['image'].'"width=150>';?>
 						<input type="file" name="image" class="form-control-file">
 					</div>
 				</div>

@@ -4,7 +4,7 @@ class ViewBlog {
 		foreach($arr as $value) {
 			echo "<div class='col-md-5'>";
 				echo '<div class="blog-capture">';
-					echo '<img src="data:image/jpeg;base64,'.base64_encode($value['image']).'" />';
+					echo '<img src="images/galery/'.$value['image'].'">';
 				echo "</div>";
 			echo "</div>";
 
@@ -28,7 +28,7 @@ class ViewBlog {
 	public static function readArticle($n) {
 		echo "<div class='col-md-12'>";
 			echo "<div class='article-capture'>";
-				echo '<img src="data:image/jpeg;base64,'.base64_encode($n['image']).'"/>';
+				echo '<img src="images/galery/'.$n['image'].'">';
 			echo "</div>";
 		echo "</div>";
 		echo "<div class='title-body'>";

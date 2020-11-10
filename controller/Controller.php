@@ -29,10 +29,6 @@ class Controller {
 		$arr = Category::getAllCategory();
 		include_once 'view/category.php';
 	}
-	/*public static function allImages() {
-		$arr = Galery::getAllImages();
-		include_once 'view/galery.php';
-	}*/
 	public static function imageByCatID($id) {
 		$arr = Galery::getImagesByCategoryID($id);
 		include_once 'view/galery.php';

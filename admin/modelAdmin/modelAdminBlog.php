@@ -12,7 +12,13 @@ class modelAdminBlog {
 			if(isset($_POST['title']) && isset($_POST['article'])){
 				$title=$_POST['title'];
 				$article=$_POST['article'];
-				$image=addslashes(file_get_contents($_FILES['picture']['tmp_name']));
+				//$image=addslashes(file_get_contents($_FILES['picture']['tmp_name']));
+				$image = basename($_FILES['picture']['name']);
+				if($image!=""){
+					$uploaddir = '../images/galery/';
+					$uploadfile = $uploaddir . basename($_FILES['picture']['name']);
+					copy($_FILES['picture']['tmp_name'], $uploadfile);
+				}
 
 				$sql = "INSERT INTO `blog`(`id`, `title`, `article`, `image`) VALUES (NULL, '$title', '$article', '$image')";
 				$db = new Database();
@@ -36,9 +42,13 @@ class modelAdminBlog {
 			if(isset($_POST['title']) && isset($_POST['article'])){
 				$title = $_POST['title'];
 				$article = $_POST['article'];
-				$image=$_FILES['image']['name'];
+				//$image=$_FILES['image']['name'];
+				$image = basename($_FILES['picture']['name']);
 				if($image!=""){
-					$image=addslashes(file_get_contents($_FILES['image']['tmp_name']));
+					//$image=addslashes(file_get_contents($_FILES['image']['tmp_name']));
+					$uploaddir = '../images/galery/';
+					$uploadfile = $uploaddir . basename($_FILES['picture']['name']);
+					copy($_FILES['picture']['tmp_name'], $uploadfile);
 				}
 				if($image==""){
 					$sql="UPDATE `blog` SET `title` = '$title', `article` = '$article' WHERE `blog`.`id` = ".$id;
