@@ -10,6 +10,8 @@
 	// ---------------- переход на страницы -----------------
 	elseif ($path == 'home') {
 		$response = Controller::startHome();
+		//$controller = new Controller();
+		//$response = $controller->startHome();
 	}
 	elseif ($path == 'service') {
 		$response = Controller::startService();

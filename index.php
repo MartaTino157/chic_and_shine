@@ -1,7 +1,7 @@
 <?php 
 session_start();
 include_once 'inc/Database.php';
-
+//добавить скобки
 require 'model/PriceList.php';
 require 'model/Category.php';
 require 'model/Galery.php';
