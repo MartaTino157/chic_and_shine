@@ -6,9 +6,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!--<link rel="stylesheet" href="public/dist/css/lightbox.min.css">-->
-
-
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="public/css/style.css">
@@ -91,8 +88,6 @@
 				}
 			?>
 		
-
-
 	<footer>
 		<div class="p-3 mb-2 text-white">
 	      	<div class="row">
@@ -109,14 +104,8 @@
 	      		</div>
 	    	</div>
 	    </div>
-	</footer>
-
-	
+	</footer>	
 </div>
-
-
-<!--<script src="public/dist/js/lightbox-plus-jquery.min.js"></script>-->
-
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -6,7 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="./public/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="./public/css/style.css">
-	
+
+	<script src="./libs/jquery/jquery-1.11.2.min.js"> </script>
+	<script type="text/javascript" src="./libs/ckeditor/ckeditor.js"> </script>  
 </head>
 <body>
 	<?php

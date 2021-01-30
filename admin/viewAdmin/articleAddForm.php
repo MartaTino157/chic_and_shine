@@ -39,7 +39,10 @@
 						</label>
 					</div>
 					<div class="form-group col-md-9">
-						<textarea class="form-control" rows="15" name="article" required></textarea>
+						<textarea class="form-control" id="editor" rows="15" name="article" required></textarea>
+						<script type="text/javascript">
+     						CKEDITOR.replace( 'editor');
+    					</script> 
 					</div>
 				</div>
 				<div class="form-row">

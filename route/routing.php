@@ -4,49 +4,60 @@
 	$num = substr_count($host, '/');
 	$path = explode('/',$host)[$num];
 
+	$controller = new Controller();
+
 	if($path == '' OR $path == 'index' OR $path == 'index.php') {
-		$response = Controller::StartSite();
+		//$response = Controller::StartSite();
+		$response = $controller->StartSite();
 	}
 	// ---------------- переход на страницы -----------------
 	elseif ($path == 'home') {
-		$response = Controller::startHome();
+		//$response = Controller::startHome();
+		$response = $controller->startHome();
 	}
 	elseif ($path == 'service') {
-		$response = Controller::startService();
+		//$response = Controller::startService();
+		$response = $controller->startService();
 	}
 
 	elseif ($path == 'galery' ) {
-		$response = Controller::startGalery();
+		//$response = Controller::startGalery();
+		$response = $controller->startGalery();
 	}
-	/*elseif ($path == 'all') {
-		$response = Controller::allImages();
-	}*/
 	elseif ($path == 'category' and isset($_GET['id'])) {
-		$response = Controller::imageByCatID($_GET['id']);	
+		//$response = Controller::imageByCatID($_GET['id']);
+		$response = $controller->imageByCatID($_GET['id']);
 	}
 
 	elseif ($path == 'blog') {
-		$response = Controller::startBlog();
+		//$response = Controller::startBlog();
+		$response = $controller->startBlog();
 	}
 	elseif ($path == 'article' and isset($_GET['id'])) {
-		$response = Controller::articleByID($_GET['id']);	
+		//$response = Controller::articleByID($_GET['id']);
+		$response = $controller->articleByID($_GET['id']);	
 	}
 
 	elseif ($path == 'appointment') {
-		$response = Controller::startAppointment();
+		//$response = Controller::startAppointment();
+		$response = $controller->startAppointment();
 	}
 	elseif($path == 'answerAppointment'){
-		$response = Controller::answerAppointment();
+		//$response = Controller::answerAppointment();
+		$response = $controller->answerAppointment();
 	}
 	elseif ($path == 'reviews') {
-		$response = Controller::startReviews();
+		//$response = Controller::startReviews();
+		$response = $controller->startReviews();
 	}
 	elseif($path == 'answerReviews'){
-		$response = Controller::answerReviews();
+		//$response = Controller::answerReviews();
+		$response = $controller->answerReviews();
 	}
 	//страница error
 	else {
-		$response = Controller::error404();	
+		//$response = Controller::error404();
+		$response = $controller->error404();	
 	}
 
 ?>

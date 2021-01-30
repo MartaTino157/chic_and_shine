@@ -2,7 +2,7 @@
 session_start();
 include_once 'inc/Database.php';
 
-require 'model/PriceList.php';
+require ('model/PriceList.php');
 require 'model/Category.php';
 require 'model/Galery.php';
 require 'model/Blog.php';
