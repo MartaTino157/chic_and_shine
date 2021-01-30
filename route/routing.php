@@ -12,8 +12,14 @@
 	}
 	// ---------------- переход на страницы -----------------
 	elseif ($path == 'home') {
+<<<<<<< HEAD
 		//$response = Controller::startHome();
 		$response = $controller->startHome();
+=======
+		$response = Controller::startHome();
+		//$controller = new Controller();
+		//$response = $controller->startHome();
+>>>>>>> e6349d9d12c2be73c7dc5ec7d15fea79630c967a
 	}
 	elseif ($path == 'service') {
 		//$response = Controller::startService();

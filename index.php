@@ -1,8 +1,13 @@
 <?php 
 session_start();
 include_once 'inc/Database.php';
+<<<<<<< HEAD
 
 require ('model/PriceList.php');
+=======
+//добавить скобки
+require 'model/PriceList.php';
+>>>>>>> e6349d9d12c2be73c7dc5ec7d15fea79630c967a
 require 'model/Category.php';
 require 'model/Galery.php';
 require 'model/Blog.php';
